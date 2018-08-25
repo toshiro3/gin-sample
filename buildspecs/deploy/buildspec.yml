@@ -26,14 +26,13 @@ phases:
       - echo Build started on `date`
       - printenv
       - ls -la
-      - git log --oneline
 #      - mvn install
 #    finally:
 #      - echo This always runs even if the install command fails
   post_build:
     commands:
       - echo Entered the post_build phase...
-#      - echo Build completed on `date`
+      - echo Build completed on `date`
 #artifacts:
 #  files:
 #    - target/messageUtil-1.0.jar
