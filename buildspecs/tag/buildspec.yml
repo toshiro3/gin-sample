@@ -34,8 +34,7 @@ phases:
       - git tag
       - TAG=$(cat version.txt)
       - echo $TAG
-      - git tag $TAG
-      - git tag
+      - git tag --force $TAG
       - git push --force-with-lease origin $TAG
 #      - mvn install
 #    finally:
