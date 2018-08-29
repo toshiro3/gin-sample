@@ -46,7 +46,7 @@ phases:
       - mkdir -p $CODEBUILD_SRC_DIR/dist
       - cp -p version.txt $CODEBUILD_SRC_DIR/dist/index.html
       - cp -p version.txt $CODEBUILD_SRC_DIR/dist/$TAG.html
-      - ls -l dist/
+      - ls -l $CODEBUILD_SRC_DIR/dist/
 artifacts:
   files:
     - 'dist/*'
