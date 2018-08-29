@@ -46,9 +46,11 @@ phases:
       - mkdir -p dist
       - cp -p version.txt index.html
       - cp -p version.txt $TAG.txt
+      - ls -l dist/
 artifacts:
   files:
     - dist/*
+  base-directory: .
   discard-paths: yes
 #cache:
 #  paths:
