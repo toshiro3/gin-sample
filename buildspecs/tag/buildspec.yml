@@ -43,9 +43,9 @@ phases:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
       - pwd
-      - mkdir -p dist
-      - cp -p version.txt dist/index.html
-      - cp -p version.txt dist/$TAG.html
+      - mkdir -p $CODEBUILD_SRC_DIR/dist
+      - cp -p version.txt $CODEBUILD_SRC_DIR/dist/index.html
+      - cp -p version.txt $CODEBUILD_SRC_DIR/dist/$TAG.html
       - ls -l dist/
 artifacts:
   files:
