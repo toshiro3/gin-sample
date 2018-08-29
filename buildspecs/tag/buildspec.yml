@@ -36,7 +36,7 @@ phases:
       - echo $TAG
       - git tag $TAG
       - git tag
-      - git push origin --tags
+      - git push origin $TAG
 #      - mvn install
 #    finally:
 #      - echo This always runs even if the install command fails
