@@ -41,11 +41,15 @@ phases:
   post_build:
     commands:
       - echo Entered the post_build phase...
-#      - echo Build completed on `date`
-#artifacts:
-#  files:
-#    - target/messageUtil-1.0.jar
-#  discard-paths: yes
+      - echo Build completed on `date`
+      - pwd
+      - mkdir -p dist
+      - cp -p version.txt index.html
+      - cp -p version.txt $TAG.txt
+artifacts:
+  files:
+    - dist/*
+  discard-paths: yes
 #cache:
 #  paths:
 #    - '/root/.m2/**/*'
