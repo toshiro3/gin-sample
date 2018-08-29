@@ -45,11 +45,11 @@ phases:
       - pwd
       - mkdir -p dist
       - cp -p version.txt dist/index.html
-      - cp -p version.txt dist/$TAG.txt
+      - cp -p version.txt dist/$TAG.html
       - ls -l dist/
 artifacts:
   files:
-    - dist/*
+    - 'dist/*'
   discard-paths: yes
 #cache:
 #  paths:
