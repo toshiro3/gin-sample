@@ -44,13 +44,12 @@ phases:
       - echo Build completed on `date`
       - pwd
       - mkdir -p dist
-      - cp -p version.txt index.html
-      - cp -p version.txt $TAG.txt
+      - cp -p version.txt dist/index.html
+      - cp -p version.txt dist/$TAG.txt
       - ls -l dist/
 artifacts:
   files:
     - dist/*
-  base-directory: .
   discard-paths: yes
 #cache:
 #  paths:
