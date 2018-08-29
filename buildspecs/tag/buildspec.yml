@@ -35,7 +35,7 @@ phases:
       - TAG=$(cat version.txt)
       - echo $TAG
       - git tag --force $TAG
-      - git push --force-with-lease origin $TAG
+      - git push --force origin $TAG
 #      - mvn install
 #    finally:
 #      - echo This always runs even if the install command fails
