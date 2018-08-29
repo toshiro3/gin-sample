@@ -26,7 +26,7 @@ phases:
       - echo Build started on `date`
       - printenv
       - ls -la
-      - git clone https://$GH_ACCOUNT:$GH_TOKEN:github.com/toshiro3/gin-sample.git
+      - git clone https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git
 #      - mvn install
 #    finally:
 #      - echo This always runs even if the install command fails
