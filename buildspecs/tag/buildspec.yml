@@ -27,9 +27,9 @@ phases:
       - printenv
       - ls -la
       - cd ../
-      - git clone https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git clone-gin-sample
+      - git clone https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git
       - ls -l
-      - cd clone-gin-sample
+      - cd gin-sample
       - git branch
       - git tag
       - TAG=$(cat version.txt)
