@@ -26,14 +26,13 @@ phases:
       - echo Build started on `date`
       - printenv
       - ls -la
-      #- cd ../
-      #- git clone https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git clone-gin-sample
-      #- cd clone-gin-sample
       - git branch
       - git remote -v
-      - git remote add source https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git
+      - git remote set-url origin https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git
+      - git checkout master
+      - git branch
       - git remote -v
-      - git fetch source
+      - git log --oneline -n 5
       - git tag
       - TAG=$(cat version.txt)
       - echo $TAG
