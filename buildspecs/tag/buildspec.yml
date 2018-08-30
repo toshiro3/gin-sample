@@ -33,7 +33,7 @@ phases:
       - cd clone-gin-sample
       - git tag
       - git tag --force $TAG $CODEBUILD_SOURCE_VERSION
-      - git push --force source $TAG
+      - git push --force origin $TAG
       - cd ../gin-sample
 #      - mvn install
 #    finally:
