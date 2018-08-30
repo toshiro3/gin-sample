@@ -32,12 +32,13 @@ phases:
       - git branch
       - git remote -v
       - git remote add source https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git
-      - git fetch
+      - git remote -v
+      - git fetch source
       - git tag
       - TAG=$(cat version.txt)
       - echo $TAG
       - git tag --force $TAG
-      - git push --force origin $TAG
+      - git push --force source $TAG
 #      - mvn install
 #    finally:
 #      - echo This always runs even if the install command fails
