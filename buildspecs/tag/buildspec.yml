@@ -32,7 +32,7 @@ phases:
       - git clone https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git clone-gin-sample
       - cd clone-gin-sample
       - git tag
-      - if [ -n "$CODEBUILD_RESOLVED_SOURCE_VERSION" ]; then COMMIT_ID=$CODEBUILD_RESOLVED_SOURCE_VERSION; else COMMIT_ID=$CODEBUILD_SOURCE_VERSION; if
+      - if [ -n "$CODEBUILD_RESOLVED_SOURCE_VERSION" ]; then COMMIT_ID=$CODEBUILD_RESOLVED_SOURCE_VERSION; else COMMIT_ID=$CODEBUILD_SOURCE_VERSION; fi
       - echo $COMMIT_ID
       #- git tag --force $TAG $CODEBUILD_SOURCE_VERSION
       #- git tag --force $TAG $CODEBUILD_RESOLVED_SOURCE_VERSION
