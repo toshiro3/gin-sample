@@ -26,18 +26,16 @@ phases:
       - echo Build started on `date`
       - printenv
       - ls -la
-      - git branch
-      - git remote -v
-      - git remote set-url origin https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git
-      - git checkout master
+      - cd ../
+      - mkdir tmp-gin-sample
+      - cd tmp-gin-sample
+      - git init
+      - git remote add origin https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git
       - git fetch
-      - git branch
-      - git remote -v
-      - git log --oneline -n 5
       - git tag
       - TAG=$(cat version.txt)
       - echo $TAG
-      - git tag --force $TAG
+      - git tag --force $TAG $CODEBUILD_SOURCE_VERSION
       - git push --force source $TAG
 #      - mvn install
 #    finally:
