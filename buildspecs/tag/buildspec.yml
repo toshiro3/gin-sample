@@ -32,7 +32,8 @@ phases:
       - git clone https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git clone-gin-sample
       - cd clone-gin-sample
       - git tag
-      - git tag --force $TAG $CODEBUILD_SOURCE_VERSION
+      #- git tag --force $TAG $CODEBUILD_SOURCE_VERSION
+      - git tag --force $TAG $CODEBUILD_RESOLVED_SOURCE_VERSION
       - git push --force origin $TAG
       - cd ../gin-sample
 #      - mvn install
