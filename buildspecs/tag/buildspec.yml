@@ -30,6 +30,7 @@ phases:
       - git remote -v
       - git remote set-url origin https://$GH_ACCOUNT:$GH_TOKEN@github.com/toshiro3/gin-sample.git
       - git checkout master
+      - git fetch
       - git branch
       - git remote -v
       - git log --oneline -n 5
